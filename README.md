@@ -1,9 +1,14 @@
 # PRISMdata_reader
 Contains a series of scripts that are easily manipulated to access the data user requires. The code can access preform computations, and vizualize data from the PRISM CLimatw Group.The data is in the form of gridded rasters over the entire US continent. There are multiple temporal scales but this code is intended for the monthly data available
 
+This data reader was made to use with data from the [PRISM Climate Group](https://prism.nacse.org) downloaded using the PRISM data pakage [prism](https://github.com/ropensci/prism).
+
+# Data 
+For the purposes of this research the monthly data from 1951-2020 was used. This data is ziped up with multiple different documents. The easiest way to use and read the data is to turn the .bil file into a Raster file.  A Raster file is an array of data known as pixels. This is a greta form for the gridded PRISM data becasue each rectangualr array is fit for each grid in the .bil file. 
 # .R files
 There are four .R documents each created for the use of manipulated previously downloaded raster files. They are specified to access data from particular directories so this aspect has to be changed personally for the user. Be sure to set the correct directory before using the programs. data_crop, crops the monthly data to a specified region in the United sates, this region can be changed by the user. compute30yr_norm, computes the 50 year average over the monthly data of previously cropped data. 
 
+Before using the code, be sure to set the current directory to the exact file.path that you have your existing PRISM files. Do the same to the end directory to set it to where you wan the data downloaded. The next important step is to make sure the file names match up with those yiu have downloaded. The majority of the time if you obtain an error it has to do with the file directory, file name, or file type. The code accesses the folder that PRISM downloads and then the .bil data inside. 
 # Analysis 
 There were multiple different analyis done. The first used the R code provided above to compute the 30 year normals for the monthly PRISM data for 1980-2020. The 30 year normal is the average of 30 years prior to the year in qestion, so for 1980 the average over 1951-1980 and so on for all 40 years. The data from 1951-2020 was used to compure the 30 year averages. This computation was repeated for each of the 12 months under each QOI(quantity of Interest). The four QOI's that were considered, were tempurature max(tmax), temperature min(tmin), tempuratre mean(tmean), and total anual precipitation (ppt). After this computation was complete there were a total of 1920 gridded raster files. The next task was to specify the particular months that provided the most information and preform statistical analysis on theose months.
 
