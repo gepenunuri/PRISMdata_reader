@@ -12,7 +12,9 @@ Before using the code, be sure to set the current directory to the exact file.pa
 # Analysis 
 There were multiple different analyis done. The first used the R code provided above to compute the 30 year normals for the monthly PRISM data for 1980-2020. The 30 year normal is the average of 30 years prior to the year in qestion, so for 1980 the average over 1951-1980 and so on for all 40 years. The data from 1951-2020 was used to compure the 30 year averages. This computation was repeated for each of the 12 months under each QOI(quantity of Interest). The four QOI's that were considered, were tempurature max(tmax), temperature min(tmin), tempuratre mean(tmean), and total anual precipitation (ppt). After this computation was complete there were a total of 1920 gridded raster files. The next task was to specify the particular months that provided the most information and preform statistical analysis on theose months.
 
-[![leaflet example figure](vignettes/leaflet_example.png)
+
+<img width="572" alt="Screen Shot 2021-06-24 at 3 28 32 PM" src="https://user-images.githubusercontent.com/85711180/123340375-f0b45b00-d500-11eb-810a-1beb41de90eb.png">
+
 
 To recognize the most drastic climate trends with in the months over the 40 years avg30yrnorm.R was used. This took the data of a singke raster data file which covered the NE region and averaged all of its values. It produces a vectore with the average NE region QOI for each of the 40 years. These new vectors were then plottef as scatterplots and Mann-Kendall as well as lowess fit tests were preformed to rule out the months that showed no trend and to indeify the ones with the most recognizable climate trends. 
 
