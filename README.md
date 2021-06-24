@@ -14,12 +14,12 @@ There were multiple different analyis done. The first used the R code provided a
 
 
 To recognize the most drastic climate trends with in the months over the 40 years avg30yrnorm.R was used. This took the data of a singke raster data file which covered the NE region and averaged all of its values. It produces a vectore with the average NE region QOI for each of the 40 years. These new vectors were then plottef as scatterplots and Mann-Kendall as well as lowess fit tests were preformed to rule out the months that showed no trend and to indeify the ones with the most recognizable climate trends. 
+
 <img width="572" alt="Screen Shot 2021-06-24 at 3 28 32 PM" src="https://user-images.githubusercontent.com/85711180/123340375-f0b45b00-d500-11eb-810a-1beb41de90eb.png">
   
 After the months were picked the second form of analysis was computed. This was taking the four QOI's for the specified months and comparing the quantities of their 30 yearnormals from 1980 to 2020. This showed directly how much of a difference there was between the entirety of th eregion The minimum, maximum, and mean values of this raster data were obtained and ploted over the 40 years. The same statistical analysis can be preformed on these newly create vectors.
 
 To really visualize the NE climate change the comparison of 2020 to 1980 was graphed out, and a few of the consecutive years in an attempt to locate local regions that were not acting in accordance to the rest of the region 
-
 
 <img width="560" alt="Screen Shot 2021-06-24 at 3 32 32 PM" src="https://user-images.githubusercontent.com/85711180/123340691-7cc68280-d501-11eb-8f1b-60f8114789c4.png">
 
